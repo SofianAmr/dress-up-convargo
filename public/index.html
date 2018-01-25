@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
     <title>CSS/HTML Workshop with Convargo</title>
   </head>
   <body>
-    <div id="trucker">
-      <input class="name" type="text" placeholder="Trucker name"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-      <input class="price-by-cubic" type="number" placeholder="Price by m3"/>
+    <div class="jumbotron text-center">
+      <h1>Dress-up Convargo</h1>
+      <p>Please fill in the fields and then click on "Compute" to 
+          calculate the debit and credit price of each actors effect</p> 
+    </div>  
+    <div id="trucker">      
+      <p>About the trucker...</p>
+      <div class="row">
+        <div class="input-group col-md-3">
+          <input type="text" class="name form-control" placeholder="Trucker name">
+        </div>
+
+        <div class="input-group col-md-3">
+          <input type="number" class="price-by-km form-control" placeholder="Price by km">
+        </div>
+
+        <div class="input-group col-md-3">
+          <input type="number" class="price-by-cubic form-control" placeholder="Price by m3">
+        </div>
+      </div>
     </div>
+
+    <div id="shipper">
+      <p>About the shipper...</p>
+      <div class="row">
+        
+          <div class="input-group col-md-3">
+            <input type="text" class="name form-control" placeholder="Shipper name">
+          </div>
+  
+          <div class="input-group col-md-3">
+            <input type="number" class="distance form-control" placeholder="Distance in km">
+          </div>
+  
+          <div class="input-group col-md-3">
+            <input type="number" class="volume form-control" placeholder="Volume in m3">
+          </div>
+
+        </div>
+    </div>
+    <!--
     <div id="shipper">
       <input class="name" type="text" placeholder="Shipper name"/>
       <input class="distance" type="number" placeholder="Distance in km"/>
       <input class="volume" type="number" placeholder="Volume in m3"/>
       <input class="option" type="checkbox" placeholder="Deductible option"/>
     </div>
+    -->
     <button id="compute">Compute</button>
     <div id="actors"></div>
+
+    <!-- JavaScript -->
     <script src="convargo.js"></script>
     <script src="index.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
