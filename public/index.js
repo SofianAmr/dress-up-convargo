@@ -25,9 +25,9 @@
 
   button.addEventListener('click', function onClick () {
     const trucker = CONVARGO.getTrucker();
-    const distance = document.querySelector('.distance').value;
-    const volume = document.querySelector('.volume').value;
-    const option = document.querySelector('.option').checked;
+    const distance = document.querySelector('.distance form-control').value;
+    const volume = document.querySelector('.volume form-control').value;
+    const option = document.querySelector('.option form-check-input').checked;
     const actors = CONVARGO.payActors(trucker, distance, volume, option);
 
     render(actors);
