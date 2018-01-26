@@ -1,74 +1,71 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css" />
+    <meta charset="utf-8">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
     <title>CSS/HTML Workshop with Convargo</title>
   </head>
   <body>
-    <div class="jumbotron text-center">
-      <h1>Dress-up Convargo</h1>
-      <p>Please fill in the fields and then click on "Compute" to 
-          calculate the debit and credit price of each actors effect.</p> 
-    </div>  
-    <div class="container">
-    <div id="trucker">      
-      <p>About the trucker...</p>
-      <div class="row col">
-        <div class="input-group col-md-3">
-          <input type="text" class="name form-control" placeholder="Trucker name">
-        </div>
-
-        <div class="input-group col-md-3">
-          <input type="number" class="price-by-km form-control" placeholder="Price by km">
-        </div>
-
-        <div class="input-group col-md-3">
-          <input type="number" class="price-by-cubic form-control" placeholder="Price by m3">
-        </div>
+    <section class="container-fluid banner">
+      <div class="inner-banner">
+          <h1>Dress-up Convargo</h1>
+          <p>Please fill in the fields and then click on "Compute" to 
+            calculate the debit and credit price of each actors effect.</p> 
       </div>
-    </div>
+    </section>
 
-    <br>
-
-    <div id="shipper">
-      <p>About the shipper...</p>
-      <div class="row col">
-        
-          <div class="input-group col-md-3">
-            <input type="text" class="name form-control" placeholder="Shipper name">
+    <section class="container-fluid inputs">
+      <section class="container">
+        <div id="trucker">
+          <div class="row">
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">?</span>
+              <input type="text" class="name form-control" placeholder="Trucker name" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">€/km</span>
+              <input type="number" class="price-by-km form-control" placeholder="Price by km" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">€/m3</span>
+              <input type="number" class="price-by-cubic form-control" placeholder="Price by m3" aria-describedby="basic-addon2">
+            </div> 
           </div>
-  
-          <div class="input-group col-md-3">
-            <input type="number" class="distance form-control" placeholder="Distance in km">
-          </div>
-  
-          <div class="input-group col-md-3">
-            <input type="number" class="volume form-control" placeholder="Volume in m3">
-          </div>
-
-          <div class="form-check">
-            <label class="form-check-label">
-              <input class="option form-check-input" type="checkbox"> deductible option
-            </label>
-          </div>
-
         </div>
-    </div>
 
-    <br>
-        <button id="compute" class="btn btn-secondary">Compute</button>
-    <br>
-    <br>
-    <h3>Debit and credit prices:</h3>
-    <div class="card">
-        <div class="card-block">
-            <div id="actors" ></div>
+        <div id="shipper">
+          <div class="row">
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">?</span>
+              <input type="text" class="name form-control" placeholder="Shipper name" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">km</span>
+              <input type="number" class="distance form-control" placeholder="Distance in km" aria-describedby="basic-addon2">
+            </div>
+            <div class="input-group col-md-3">
+              <span class="input-group-addon" id="basic-addon2">m3</span>
+              <input type="number" class="volume form-control" placeholder="Volume in m3" aria-describedby="basic-addon2">
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input class="option form-check-input" type="checkbox">
+                Deductible option 
+              </label>
+            </div>
+          </div>
         </div>
-    </div>                
-      
-    
-  </div>
+      </section>     
+    </section>
+
+    <section class="container-fluid results">
+      <button id="compute" class="btn btn-secondary">Compute</button>
+      <div id="actors" ></div>
+    </section>
 
     <!-- JavaScript -->
     <script src="convargo.js"></script>
